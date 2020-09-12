@@ -42,6 +42,8 @@ TaskController.prototype = {
         /*Attach task which should after the model have run a task */
         this.model.addTaskEvent.attach(this.view.addTaskHandler);
         this.model.addTaskEvent.attach(this.view.clearTaskTextBoxHandler);
+        this.model.setTasksAsCompletedEvent.attach(this.view.setTasksAsCompletedHandler);
+        this.model.deleteTasksEvent.attach(this.view.deleteTasksHandler);
 
         return this;
     },

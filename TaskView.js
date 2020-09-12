@@ -61,8 +61,8 @@ TaskView.prototype = {
          */
         /*this.model.addTaskEvent.attach(this.addTaskHandler);*/
         // this.model.addTaskEvent.attach(this.clearTaskTextBoxHandler);
-        this.model.setTasksAsCompletedEvent.attach(this.setTasksAsCompletedHandler);
-        this.model.deleteTasksEvent.attach(this.deleteTasksHandler);
+        /*this.model.setTasksAsCompletedEvent.attach(this.setTasksAsCompletedHandler);
+        this.model.deleteTasksEvent.attach(this.deleteTasksHandler);*/
 
         return this;
     },
