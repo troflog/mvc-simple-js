@@ -31,12 +31,17 @@ TaskController.prototype = {
     },
 
     enable: function () {
+        /*Couple events between  */
 
         this.view.addTaskEvent.attach(this.addTaskHandler);
         this.view.completeTaskEvent.attach(this.completeTaskHandler);
         this.view.deleteTaskEvent.attach(this.deleteTaskHandler);
         this.view.selectTaskEvent.attach(this.selectTaskHandler);
         this.view.unselectTaskEvent.attach(this.unselectTaskHandler);
+
+        /*Attach task which should after the model have run a task */
+        this.model.addTaskEvent.attach(this.view.addTaskHandler);
+        this.model.addTaskEvent.attach(this.view.clearTaskTextBoxHandler);
 
         return this;
     },

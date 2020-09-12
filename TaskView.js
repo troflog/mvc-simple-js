@@ -35,7 +35,8 @@ TaskView.prototype = {
         this.deleteTaskButtonHandler = this.deleteTaskButton.bind(this);
 
         /**
-        Handlers from Event Dispatcher        
+        Handlers from Event Dispatcher  
+        These should be run by the model after update      
         */
         this.addTaskHandler = this.addTask.bind(this);
         this.clearTaskTextBoxHandler = this.clearTaskTextBox.bind(this);
@@ -58,8 +59,8 @@ TaskView.prototype = {
          * For this event model the order which the events are added
          * is important.
          */
-        this.model.addTaskEvent.attach(this.addTaskHandler);
-        this.model.addTaskEvent.attach(this.clearTaskTextBoxHandler);
+        /*this.model.addTaskEvent.attach(this.addTaskHandler);*/
+        // this.model.addTaskEvent.attach(this.clearTaskTextBoxHandler);
         this.model.setTasksAsCompletedEvent.attach(this.setTasksAsCompletedHandler);
         this.model.deleteTasksEvent.attach(this.deleteTasksHandler);
 
