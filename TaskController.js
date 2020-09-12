@@ -48,7 +48,7 @@ TaskController.prototype = {
         return this;
     },
 
-
+    /*Same functions for view should go here */
     addTask: function (sender, args) {
         this.model.addTask(args.task);
     },
