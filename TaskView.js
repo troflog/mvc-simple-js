@@ -35,7 +35,7 @@ TaskView.prototype = {
         this.deleteTaskButtonHandler = this.deleteTaskButton.bind(this);
 
         /**
-        Handlers from Event Dispatcher
+        Handlers from Event Dispatcher        
         */
         this.addTaskHandler = this.addTask.bind(this);
         this.clearTaskTextBoxHandler = this.clearTaskTextBox.bind(this);
@@ -54,6 +54,9 @@ TaskView.prototype = {
 
         /**
          * Event Dispatcher
+         * Should this be moved to controller?
+         * For this event model the order which the events are added
+         * is important.
          */
         this.model.addTaskEvent.attach(this.addTaskHandler);
         this.model.addTaskEvent.attach(this.clearTaskTextBoxHandler);
